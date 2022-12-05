@@ -95,40 +95,7 @@ extension ProfileView {
                 .font(.subheadline)
                 .padding(.vertical)
             
-            HStack(spacing: 24){
-                
-                HStack{
-                    Image(systemName: "mappin.and.ellipse")
-                    Text("Coahuila, MX")
-                }
-                
-                HStack{
-                    Image(systemName: "link")
-                    Text("www.alandev.com")
-                }
-            }.font(.caption)
-            .foregroundColor(.gray)
-            
-            HStack(spacing: 24){
-                
-                HStack(spacing: 4){
-                    Text("109")
-                        .font(.subheadline)
-                        .bold()
-                    Text("Following")
-                        .font(.caption)
-                        .foregroundColor(.gray)
-                }
-                
-                HStack{
-                    Text("1M")
-                        .font(.subheadline)
-                        .bold()
-                    Text("Followers")
-                        .font(.caption)
-                        .foregroundColor(.gray)
-                }
-            }.padding(.vertical)
+            UserStatsView().padding(.vertical)
         }.padding(.horizontal)
     }
     

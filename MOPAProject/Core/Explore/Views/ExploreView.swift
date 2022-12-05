@@ -26,9 +26,9 @@ struct ExploreView: View {
                 }
                 .navigationBarBackButtonHidden(true)
             }
-            .navigationTitle("Explore")
+            //.navigationTitle("Explore")
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarBackButtonHidden()
+            
             
                 
         }

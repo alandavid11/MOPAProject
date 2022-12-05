@@ -19,6 +19,7 @@ struct MainTabView: View {
                 .tabItem{
                     Image(systemName: "house")
                 }.tag(0)
+                .navigationTitle("Home")
             
             ExploreView()
                 .onTapGesture {
@@ -27,6 +28,8 @@ struct MainTabView: View {
                 .tabItem{
                     Image(systemName: "magnifyingglass")
                 }.tag(1)
+                .navigationTitle("Explore")
+                
             
             NotificationsView()
                 .onTapGesture {
