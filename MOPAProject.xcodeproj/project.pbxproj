@@ -25,6 +25,8 @@
 		92B76C1C293D8979001E3794 /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B76C1B293D8979001E3794 /* SideMenuViewModel.swift */; };
 		92B76C1E293D8B87001E3794 /* UserStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B76C1D293D8B87001E3794 /* UserStatsView.swift */; };
 		92B76C20293D9B2D001E3794 /* SideMenuOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B76C1F293D9B2D001E3794 /* SideMenuOptionView.swift */; };
+		92B76C26293EDC7A001E3794 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B76C25293EDC7A001E3794 /* NewPostView.swift */; };
+		92B76C28293EDDA3001E3794 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B76C27293EDDA3001E3794 /* TextArea.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		92B76C1B293D8979001E3794 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
 		92B76C1D293D8B87001E3794 /* UserStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatsView.swift; sourceTree = "<group>"; };
 		92B76C1F293D9B2D001E3794 /* SideMenuOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionView.swift; sourceTree = "<group>"; };
+		92B76C25293EDC7A001E3794 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
+		92B76C27293EDDA3001E3794 /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +106,9 @@
 		92B76BEA293854AA001E3794 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				92B76C13293D892E001E3794 /* SideMenu */,
 				92B76BEF293854EF001E3794 /* Components */,
+				92B76C22293EDC09001E3794 /* UploadPost */,
+				92B76C13293D892E001E3794 /* SideMenu */,
 				92B76BFE293985E3001E3794 /* Profile */,
 				92B76BFC293985C3001E3794 /* Explore */,
 				92B76BFB293985B7001E3794 /* Notifications */,
@@ -172,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				92B76BF5293855F5001E3794 /* PostRowView.swift */,
+				92B76C27293EDDA3001E3794 /* TextArea.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -285,6 +291,30 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		92B76C22293EDC09001E3794 /* UploadPost */ = {
+			isa = PBXGroup;
+			children = (
+				92B76C24293EDC5C001E3794 /* ViewModels */,
+				92B76C23293EDC5A001E3794 /* Views */,
+			);
+			path = UploadPost;
+			sourceTree = "<group>";
+		};
+		92B76C23293EDC5A001E3794 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				92B76C25293EDC7A001E3794 /* NewPostView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		92B76C24293EDC5C001E3794 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -362,12 +392,14 @@
 				92B76C1A293D896B001E3794 /* SideMenuRowView.swift in Sources */,
 				92B76BF6293855F5001E3794 /* PostRowView.swift in Sources */,
 				92B76C0F293D2E6D001E3794 /* ExploreView.swift in Sources */,
+				92B76C28293EDDA3001E3794 /* TextArea.swift in Sources */,
 				92B76C0A293D23CB001E3794 /* TweetFilterViewModel.swift in Sources */,
 				92B76C18293D8958001E3794 /* SideMenuView.swift in Sources */,
 				92B76BF32938553F001E3794 /* FeedView.swift in Sources */,
 				92B76BDD2938545A001E3794 /* MOPAProjectApp.swift in Sources */,
 				92B76C1C293D8979001E3794 /* SideMenuViewModel.swift in Sources */,
 				92B76C12293D2FFD001E3794 /* UserRowView.swift in Sources */,
+				92B76C26293EDC7A001E3794 /* NewPostView.swift in Sources */,
 				92B76BF929398313001E3794 /* MainTabView.swift in Sources */,
 				92B76C0229398616001E3794 /* NotificationsView.swift in Sources */,
 				92B76C1E293D8B87001E3794 /* UserStatsView.swift in Sources */,
