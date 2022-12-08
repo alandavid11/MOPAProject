@@ -10,26 +10,13 @@ import SwiftUI
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
+    @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
         // Parent Container
         VStack{
             
             // Header view
-            VStack(alignment: .leading){
-                HStack{ Spacer()}
-                Text("Hello,")
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
-                
-                Text("Welcome back")
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
-            }
-            .frame(height: 260)
-            .padding(.leading)
-            .background(Color("darkgreen"))
-            .foregroundColor(.white)
-            .clipShape(RoundedShape(corners: [.bottomRight]))
+            AuthHeaderView(title1: "Hello,", title2: "Welcome back.")
             
             VStack(spacing: 40){
                 
@@ -56,7 +43,7 @@ struct LoginView: View {
             }
             
             Button {
-                print("Sign in here...")
+                viewModel.login(withEmail: email, password: password)
             } label: {
                 Text("Sign In")
                     .font(.headline)

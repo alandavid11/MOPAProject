@@ -8,8 +8,62 @@
 import SwiftUI
 
 struct RegistrationView: View {
+    @State private var email = ""
+    @State private var username = ""
+    @State private var fullname = ""
+    @State private var password = ""
+    @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack {
+            AuthHeaderView(title1: "Get started.", title2: "Create your account")
+            
+            VStack(spacing: 40){
+                
+                CustomImputFields(imageName: "envelope", placeholderText: "Email", text: $email)
+                
+                CustomImputFields(imageName: "person", placeholderText: "Username", text: $username)
+                CustomImputFields(imageName: "figure.wave.circle", placeholderText: "Full name", text: $fullname)
+                
+                CustomImputFields(imageName: "lock.shield.fill", placeholderText: "Password", text: $password)
+            }.padding(.horizontal, 32)
+                .padding(.top, 44)
+            
+            Button {
+                viewModel.register(withEmail: email,
+                                   password: password,
+                                   fullname: fullname,
+                                   username: username)
+            } label: {
+                Text("Sign Up")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .frame(width: 340, height: 50)
+                    .background(Color("darkgreen"))
+                    .clipShape(Capsule())
+                    .padding()
+            }
+            .shadow(color: .gray.opacity(0.5), radius: 10, x: 0, y: 0)
+            
+            Spacer()
+            
+            Button {
+                dismiss()
+            } label: {
+                HStack{
+                    Text("Already have an account")
+                        .font(.footnote)
+                    
+                    Text("Sign In")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                }
+            }.padding(.bottom, 32)
+
+        }.ignoresSafeArea()
+        
+        
     }
 }
 

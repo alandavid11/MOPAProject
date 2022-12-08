@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		923B70BE29419973002A5EF6 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B70BD29419973002A5EF6 /* AuthViewModel.swift */; };
 		92B76BDD2938545A001E3794 /* MOPAProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B76BDC2938545A001E3794 /* MOPAProjectApp.swift */; };
 		92B76BDF2938545A001E3794 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B76BDE2938545A001E3794 /* ContentView.swift */; };
 		92B76BE12938545C001E3794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92B76BE02938545C001E3794 /* Assets.xcassets */; };
@@ -31,9 +32,15 @@
 		92B76C2F294029C3001E3794 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B76C2E294029C3001E3794 /* RegistrationView.swift */; };
 		92B76C3129402BB2001E3794 /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B76C3029402BB2001E3794 /* RoundedShape.swift */; };
 		92B76C33294046CD001E3794 /* CustomImputFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B76C32294046CD001E3794 /* CustomImputFields.swift */; };
+		92FFA73529416E1B0071E15D /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FFA73429416E1B0071E15D /* AuthHeaderView.swift */; };
+		92FFA737294175730071E15D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92FFA736294175730071E15D /* GoogleService-Info.plist */; };
+		92FFA73A294178BE0071E15D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 92FFA739294178BE0071E15D /* FirebaseAuth */; };
+		92FFA73C294178BE0071E15D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 92FFA73B294178BE0071E15D /* FirebaseFirestoreSwift */; };
+		92FFA73E294178BE0071E15D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 92FFA73D294178BE0071E15D /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		923B70BD29419973002A5EF6 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		92B76BD92938545A001E3794 /* MOPAProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MOPAProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B76BDC2938545A001E3794 /* MOPAProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOPAProjectApp.swift; sourceTree = "<group>"; };
 		92B76BDE2938545A001E3794 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +66,8 @@
 		92B76C2E294029C3001E3794 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		92B76C3029402BB2001E3794 /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
 		92B76C32294046CD001E3794 /* CustomImputFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImputFields.swift; sourceTree = "<group>"; };
+		92FFA73429416E1B0071E15D /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
+		92FFA736294175730071E15D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +75,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92FFA73A294178BE0071E15D /* FirebaseAuth in Frameworks */,
+				92FFA73C294178BE0071E15D /* FirebaseFirestoreSwift in Frameworks */,
+				92FFA73E294178BE0071E15D /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +110,7 @@
 				92B76BDC2938545A001E3794 /* MOPAProjectApp.swift */,
 				92B76BDE2938545A001E3794 /* ContentView.swift */,
 				92B76BE02938545C001E3794 /* Assets.xcassets */,
+				92FFA736294175730071E15D /* GoogleService-Info.plist */,
 				92B76BE22938545C001E3794 /* Preview Content */,
 			);
 			path = MOPAProject;
@@ -161,6 +174,7 @@
 		92B76BEF293854EF001E3794 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				92FFA73329416E020071E15D /* Authentication */,
 				92B76C10293D2FE8001E3794 /* Users */,
 				92B76BF4293855B7001E3794 /* Post */,
 				92B76C3029402BB2001E3794 /* RoundedShape.swift */,
@@ -338,6 +352,7 @@
 		92B76C2A2940299F001E3794 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				923B70BD29419973002A5EF6 /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -349,6 +364,14 @@
 				92B76C2E294029C3001E3794 /* RegistrationView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		92FFA73329416E020071E15D /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				92FFA73429416E1B0071E15D /* AuthHeaderView.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +390,11 @@
 			dependencies = (
 			);
 			name = MOPAProject;
+			packageProductDependencies = (
+				92FFA739294178BE0071E15D /* FirebaseAuth */,
+				92FFA73B294178BE0071E15D /* FirebaseFirestoreSwift */,
+				92FFA73D294178BE0071E15D /* FirebaseStorage */,
+			);
 			productName = MOPAProject;
 			productReference = 92B76BD92938545A001E3794 /* MOPAProject.app */;
 			productType = "com.apple.product-type.application";
@@ -395,6 +423,9 @@
 				Base,
 			);
 			mainGroup = 92B76BD02938545A001E3794;
+			packageReferences = (
+				92FFA738294178BE0071E15D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 92B76BDA2938545A001E3794 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -411,6 +442,7 @@
 			files = (
 				92B76BE42938545C001E3794 /* Preview Assets.xcassets in Resources */,
 				92B76BE12938545C001E3794 /* Assets.xcassets in Resources */,
+				92FFA737294175730071E15D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +473,8 @@
 				92B76BF929398313001E3794 /* MainTabView.swift in Sources */,
 				92B76C2D294029B6001E3794 /* LoginView.swift in Sources */,
 				92B76C0229398616001E3794 /* NotificationsView.swift in Sources */,
+				923B70BE29419973002A5EF6 /* AuthViewModel.swift in Sources */,
+				92FFA73529416E1B0071E15D /* AuthHeaderView.swift in Sources */,
 				92B76C1E293D8B87001E3794 /* UserStatsView.swift in Sources */,
 				92B76C2F294029C3001E3794 /* RegistrationView.swift in Sources */,
 			);
@@ -643,6 +677,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		92FFA738294178BE0071E15D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		92FFA739294178BE0071E15D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92FFA738294178BE0071E15D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		92FFA73B294178BE0071E15D /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92FFA738294178BE0071E15D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		92FFA73D294178BE0071E15D /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92FFA738294178BE0071E15D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 92B76BD12938545A001E3794 /* Project object */;
 }
