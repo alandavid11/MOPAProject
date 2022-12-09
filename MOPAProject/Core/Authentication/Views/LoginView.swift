@@ -22,7 +22,10 @@ struct LoginView: View {
                 
                 CustomImputFields(imageName: "person", placeholderText: "Email", text: $email)
                 
-                CustomImputFields(imageName: "lock.shield.fill", placeholderText: "Password", text: $password)
+                CustomImputFields(imageName: "lock.shield.fill",
+                                  placeholderText: "Password",
+                                  isSecureField: true,
+                                  text: $password)
             }
             .padding(.horizontal, 32)
             .padding(.top, 44)

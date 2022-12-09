@@ -26,7 +26,10 @@ struct RegistrationView: View {
                 CustomImputFields(imageName: "person", placeholderText: "Username", text: $username)
                 CustomImputFields(imageName: "figure.wave.circle", placeholderText: "Full name", text: $fullname)
                 
-                CustomImputFields(imageName: "lock.shield.fill", placeholderText: "Password", text: $password)
+                CustomImputFields(imageName: "lock.shield.fill",
+                                  placeholderText: "Password",
+                                  isSecureField: true,
+                                  text: $password)
             }.padding(.horizontal, 32)
                 .padding(.top, 44)
             
