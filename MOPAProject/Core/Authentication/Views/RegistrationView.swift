@@ -17,6 +17,7 @@ struct RegistrationView: View {
     var body: some View {
         
         VStack {
+            
             AuthHeaderView(title1: "Get started.", title2: "Create your account")
             
             VStack(spacing: 40){
@@ -38,6 +39,8 @@ struct RegistrationView: View {
                                    password: password,
                                    fullname: fullname,
                                    username: username)
+                
+                
             } label: {
                 Text("Sign Up")
                     .font(.headline)
@@ -48,6 +51,9 @@ struct RegistrationView: View {
                     .padding()
             }
             .shadow(color: .gray.opacity(0.5), radius: 10, x: 0, y: 0)
+            .fullScreenCover(isPresented: $viewModel.didAuthenticateUser) {
+                ProfilePhotoSelectorView()
+            }
             
             Spacer()
             

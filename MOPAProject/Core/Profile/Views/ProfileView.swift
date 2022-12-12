@@ -6,11 +6,17 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ProfileView: View {
     @State private var selectedFilter: PostFilterViewModel = .Bets
     @Environment(\.dismiss) private var dismiss
     @Namespace var animation
+    private let user: UserInfo
+    
+    init(user: UserInfo){
+        self.user = user
+    }
     var body: some View {
         VStack(alignment: .leading){
             headerView
@@ -30,7 +36,11 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(user: UserInfo(id: NSUUID().uuidString,
+                                   username: "spiderman",
+                                   fullname: "Peter Parker",
+                                   profileImageUrl: "",
+                                   email: "spiderman@hotmail.com"))
     }
 }
 
@@ -45,9 +55,12 @@ extension ProfileView {
                         .resizable()
                         .frame(width: 20, height: 16)
                         .foregroundColor(.white)
-                        .offset(x: 16, y: 5)
+                        .offset(x: 16, y: -20)
                 })
-                Circle()
+                KFImage(URL(string: user.profileImageUrl))
+                    .resizable()
+                    .scaledToFill()
+                    .clipShape(Circle())
                     .frame(width: 78, height: 78)
                 .offset(x:16, y: 24)
             }
@@ -80,14 +93,14 @@ extension ProfileView {
         VStack(alignment: .leading, spacing: 4){
             
             HStack {
-                Text("Alan Gloria")
+                Text(user.fullname)
                     .font(.title2).bold()
                 
                 Image(systemName: "checkmark.seal.fill")
                     .foregroundColor(Color("mediumgreen"))
             }
             
-            Text("@alandev_")
+            Text("@\(user.username)")
                 .font(.subheadline)
                 .foregroundColor(.gray)
             

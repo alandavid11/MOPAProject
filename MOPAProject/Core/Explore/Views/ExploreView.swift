@@ -14,12 +14,12 @@ struct ExploreView: View {
                 ScrollView{
                     LazyVStack{
                         ForEach(0 ... 25, id: \.self){
-                            _ in
-                            NavigationLink(destination: ProfileView())
-                             {
+                            _ in NavigationLink {
+                                //ProfileView()
+                            } label: {
                                 UserRowView()
-                             }
-                            
+                            }
+
                         }
                     }
                     
