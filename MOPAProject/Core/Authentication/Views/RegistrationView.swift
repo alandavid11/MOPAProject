@@ -22,10 +22,16 @@ struct RegistrationView: View {
             
             VStack(spacing: 40){
                 
-                CustomImputFields(imageName: "envelope", placeholderText: "Email", text: $email)
+                CustomImputFields(imageName: "figure.wave.circle", placeholderText: "Full name", text: $fullname)
+                    
                 
                 CustomImputFields(imageName: "person", placeholderText: "Username", text: $username)
-                CustomImputFields(imageName: "figure.wave.circle", placeholderText: "Full name", text: $fullname)
+                    .textContentType(.emailAddress)
+                    .keyboardType(.emailAddress)
+                
+                CustomImputFields(imageName: "envelope", placeholderText: "Email", text: $email)
+                    .textContentType(.emailAddress)
+                    .keyboardType(.emailAddress)
                 
                 CustomImputFields(imageName: "lock.shield.fill",
                                   placeholderText: "Password",

@@ -32,7 +32,7 @@ class AuthViewModel: ObservableObject {
             
             guard let user = Result?.user else {return}
             self.userSession = user
-            print("DEBUG Did log user in")
+            self.fetchuser()
         }
     }
     
@@ -76,6 +76,7 @@ class AuthViewModel: ObservableObject {
                 .document(uid)
                 .updateData(["profileImageUrl": profileImageUrl]) { _ in
                     self.userSession = self.tempUserSession
+                    self.fetchuser()
                 }
         }
     }

@@ -8,30 +8,29 @@
 import SwiftUI
 
 struct ExploreView: View {
+    @ObservedObject var viewModel = ExploreViewModel()
+    
+    
     var body: some View {
-        NavigationView{
-            VStack{
-                ScrollView{
-                    LazyVStack{
-                        ForEach(0 ... 25, id: \.self){
-                            _ in NavigationLink {
-                                //ProfileView()
-                            } label: {
-                                UserRowView()
-                            }
-
+        VStack{
+            SearchBar(text: $viewModel.searchText)
+            ScrollView{
+                LazyVStack{
+                    ForEach(viewModel.searchableUsers){
+                        user in NavigationLink {
+                            ProfileView(user: user)
+                        } label: {
+                            UserRowView(user: user)
                         }
+
                     }
-                    
                 }
-                .navigationBarBackButtonHidden(true)
-            }
-            //.navigationTitle("Explore")
-            .navigationBarTitleDisplayMode(.inline)
-            
-            
                 
+            }
+            
         }
+        .navigationTitle("Explore")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

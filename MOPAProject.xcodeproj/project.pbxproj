@@ -13,6 +13,8 @@
 		923B70C42946A86B002A5EF6 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B70C32946A86B002A5EF6 /* UserService.swift */; };
 		923B70C62946AA43002A5EF6 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B70C52946AA43002A5EF6 /* UserInfo.swift */; };
 		923B70C9294700CF002A5EF6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 923B70C8294700CF002A5EF6 /* Kingfisher */; };
+		923B70CB29481EF4002A5EF6 /* EploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B70CA29481EF4002A5EF6 /* EploreViewModel.swift */; };
+		923B70CD294824B8002A5EF6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B70CC294824B7002A5EF6 /* SearchBar.swift */; };
 		92B76BDD2938545A001E3794 /* MOPAProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B76BDC2938545A001E3794 /* MOPAProjectApp.swift */; };
 		92B76BDF2938545A001E3794 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B76BDE2938545A001E3794 /* ContentView.swift */; };
 		92B76BE12938545C001E3794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92B76BE02938545C001E3794 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		923B70C1294682E4002A5EF6 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		923B70C32946A86B002A5EF6 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		923B70C52946AA43002A5EF6 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		923B70CA29481EF4002A5EF6 /* EploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EploreViewModel.swift; sourceTree = "<group>"; };
+		923B70CC294824B7002A5EF6 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		92B76BD92938545A001E3794 /* MOPAProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MOPAProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B76BDC2938545A001E3794 /* MOPAProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOPAProjectApp.swift; sourceTree = "<group>"; };
 		92B76BDE2938545A001E3794 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -192,6 +196,7 @@
 				92B76BF4293855B7001E3794 /* Post */,
 				92B76C3029402BB2001E3794 /* RoundedShape.swift */,
 				92B76C32294046CD001E3794 /* CustomImputFields.swift */,
+				923B70CC294824B7002A5EF6 /* SearchBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 		92B76C0B293D2C98001E3794 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				923B70CA29481EF4002A5EF6 /* EploreViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -469,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923B70CB29481EF4002A5EF6 /* EploreViewModel.swift in Sources */,
 				92B76C0429398626001E3794 /* MessagesView.swift in Sources */,
 				92B76C20293D9B2D001E3794 /* SideMenuOptionView.swift in Sources */,
 				923B70C42946A86B002A5EF6 /* UserService.swift in Sources */,
@@ -485,6 +492,7 @@
 				92B76BDD2938545A001E3794 /* MOPAProjectApp.swift in Sources */,
 				92B76C1C293D8979001E3794 /* SideMenuViewModel.swift in Sources */,
 				92B76C33294046CD001E3794 /* CustomImputFields.swift in Sources */,
+				923B70CD294824B8002A5EF6 /* SearchBar.swift in Sources */,
 				923B70C0294653DF002A5EF6 /* ProfilePhotoSelectorView.swift in Sources */,
 				92B76C12293D2FFD001E3794 /* UserRowView.swift in Sources */,
 				92B76C3129402BB2001E3794 /* RoundedShape.swift in Sources */,
