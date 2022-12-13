@@ -6,42 +6,49 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct PostRowView: View {
+    let post: Post
     var body: some View {
         VStack(alignment: .leading){
             // Imagen de perfil + informacion de usuario + post
-            HStack(alignment: .top, spacing: 12){
-                Circle()
-                    .frame(width: 56, height: 56)
-                    .foregroundColor(Color.blue)
-                
-                // Informacion de ususario + titulo del post
-                VStack(alignment: .leading, spacing: 6){
-                    // Informacion de usuario
-                    HStack {
-                        Text("Alan Gloria")
+            if let user = post.user {
+                HStack(alignment: .top, spacing: 12){
+                    KFImage(URL(string: user.profileImageUrl))
+                        .resizable()
+                        .scaledToFill()
+                        .clipShape(Circle())
+                        .frame(width: 56, height: 56)
+                        
+                    
+                    // Informacion de ususario + titulo del post
+                    VStack(alignment: .leading, spacing: 6){
+                        // Informacion de usuario
+                        HStack {
+                            Text(user.fullname)
+                                .font(.subheadline)
+                                .bold()
+                            
+                            Text("@\(user.username)")
+                                .foregroundColor(.gray)
+                                .font(.caption)
+                            
+                            Text("• 3d")
+                                .foregroundColor(.gray)
+                                .font(.caption)
+                        }
+                        
+                        // Post
+                        
+                        Text(post.caption)
                             .font(.subheadline)
-                            .bold()
+                            .multilineTextAlignment(.leading)
                         
-                        Text("@Developing")
-                            .foregroundColor(.gray)
-                            .font(.caption)
                         
-                        Text("• 3d")
-                            .foregroundColor(.gray)
-                            .font(.caption)
                     }
                     
-                    // Post
-                    
-                    Text("PHI v AZ Un 49")
-                        .font(.subheadline)
-                        .multilineTextAlignment(.leading)
-                    
-                    
                 }
-                
             }
             // Botones de accion
             HStack{
@@ -75,8 +82,8 @@ struct PostRowView: View {
     }
 }
 
-struct PostRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        PostRowView()
-    }
-}
+//struct PostRowView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PostRowView()
+//    }
+//}

@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct NewPostView: View {
     @State private var caption = ""
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject var authviewModel: AuthViewModel
+    @ObservedObject var viewModel = UploadPostViewModel()
+    
     var body: some View {
         VStack{
             HStack{
@@ -23,7 +27,7 @@ struct NewPostView: View {
                 Spacer()
                 
                 Button {
-                    print("Post")
+                    viewModel.uploadPost(withCaption: caption)
                 } label: {
                     Text("Post")
                         .bold()
@@ -37,8 +41,13 @@ struct NewPostView: View {
             }.padding()
             
             HStack(alignment: .top){
-                Circle()
-                    .frame(width: 64, height: 64)
+                if let user = authviewModel.currentUser {
+                    KFImage(URL(string: user.profileImageUrl))
+                        .resizable()
+                        .scaledToFill()
+                        .clipShape(Circle())
+                        .frame(width: 64, height: 64)
+                }
                 
                 ZStack(alignment: .topLeading) {
                            TextEditor(text: $caption)
@@ -53,6 +62,11 @@ struct NewPostView: View {
                        }
             }
             .padding()
+        }
+        .onReceive(viewModel.$didUploadPost) { success in
+            if success {
+                dismiss()
+            }
         }
     }
 }

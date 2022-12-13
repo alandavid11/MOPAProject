@@ -15,6 +15,10 @@
 		923B70C9294700CF002A5EF6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 923B70C8294700CF002A5EF6 /* Kingfisher */; };
 		923B70CB29481EF4002A5EF6 /* EploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B70CA29481EF4002A5EF6 /* EploreViewModel.swift */; };
 		923B70CD294824B8002A5EF6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B70CC294824B7002A5EF6 /* SearchBar.swift */; };
+		923B70CF2948457E002A5EF6 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B70CE2948457E002A5EF6 /* PostService.swift */; };
+		923B70D1294846DE002A5EF6 /* uploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B70D0294846DE002A5EF6 /* uploadPostViewModel.swift */; };
+		923B70D329484A33002A5EF6 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B70D229484A33002A5EF6 /* FeedViewModel.swift */; };
+		923B70D529484BF4002A5EF6 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B70D429484BF4002A5EF6 /* Post.swift */; };
 		92B76BDD2938545A001E3794 /* MOPAProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B76BDC2938545A001E3794 /* MOPAProjectApp.swift */; };
 		92B76BDF2938545A001E3794 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B76BDE2938545A001E3794 /* ContentView.swift */; };
 		92B76BE12938545C001E3794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92B76BE02938545C001E3794 /* Assets.xcassets */; };
@@ -54,6 +58,10 @@
 		923B70C52946AA43002A5EF6 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		923B70CA29481EF4002A5EF6 /* EploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EploreViewModel.swift; sourceTree = "<group>"; };
 		923B70CC294824B7002A5EF6 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		923B70CE2948457E002A5EF6 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		923B70D0294846DE002A5EF6 /* uploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadPostViewModel.swift; sourceTree = "<group>"; };
+		923B70D229484A33002A5EF6 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		923B70D429484BF4002A5EF6 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		92B76BD92938545A001E3794 /* MOPAProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MOPAProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B76BDC2938545A001E3794 /* MOPAProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOPAProjectApp.swift; sourceTree = "<group>"; };
 		92B76BDE2938545A001E3794 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -160,6 +168,7 @@
 			children = (
 				923B70C1294682E4002A5EF6 /* ImageUploader.swift */,
 				923B70C32946A86B002A5EF6 /* UserService.swift */,
+				923B70CE2948457E002A5EF6 /* PostService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -168,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				923B70C52946AA43002A5EF6 /* UserInfo.swift */,
+				923B70D429484BF4002A5EF6 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,6 +222,7 @@
 		92B76BF129385521001E3794 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				923B70D229484A33002A5EF6 /* FeedViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -355,6 +366,7 @@
 		92B76C24293EDC5C001E3794 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				923B70D0294846DE002A5EF6 /* uploadPostViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -475,16 +487,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923B70CF2948457E002A5EF6 /* PostService.swift in Sources */,
 				923B70CB29481EF4002A5EF6 /* EploreViewModel.swift in Sources */,
 				92B76C0429398626001E3794 /* MessagesView.swift in Sources */,
 				92B76C20293D9B2D001E3794 /* SideMenuOptionView.swift in Sources */,
 				923B70C42946A86B002A5EF6 /* UserService.swift in Sources */,
+				923B70D329484A33002A5EF6 /* FeedViewModel.swift in Sources */,
 				92B76C08293988E5001E3794 /* ProfileView.swift in Sources */,
 				92B76BDF2938545A001E3794 /* ContentView.swift in Sources */,
 				92B76C1A293D896B001E3794 /* SideMenuRowView.swift in Sources */,
 				923B70C2294682E4002A5EF6 /* ImageUploader.swift in Sources */,
 				92B76BF6293855F5001E3794 /* PostRowView.swift in Sources */,
 				92B76C0F293D2E6D001E3794 /* ExploreView.swift in Sources */,
+				923B70D1294846DE002A5EF6 /* uploadPostViewModel.swift in Sources */,
 				92B76C28293EDDA3001E3794 /* TextArea.swift in Sources */,
 				92B76C0A293D23CB001E3794 /* TweetFilterViewModel.swift in Sources */,
 				92B76C18293D8958001E3794 /* SideMenuView.swift in Sources */,
@@ -493,6 +508,7 @@
 				92B76C1C293D8979001E3794 /* SideMenuViewModel.swift in Sources */,
 				92B76C33294046CD001E3794 /* CustomImputFields.swift in Sources */,
 				923B70CD294824B8002A5EF6 /* SearchBar.swift in Sources */,
+				923B70D529484BF4002A5EF6 /* Post.swift in Sources */,
 				923B70C0294653DF002A5EF6 /* ProfilePhotoSelectorView.swift in Sources */,
 				92B76C12293D2FFD001E3794 /* UserRowView.swift in Sources */,
 				92B76C3129402BB2001E3794 /* RoundedShape.swift in Sources */,
