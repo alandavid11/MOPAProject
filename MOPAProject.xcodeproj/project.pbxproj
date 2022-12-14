@@ -19,6 +19,8 @@
 		923B70D1294846DE002A5EF6 /* uploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B70D0294846DE002A5EF6 /* uploadPostViewModel.swift */; };
 		923B70D329484A33002A5EF6 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B70D229484A33002A5EF6 /* FeedViewModel.swift */; };
 		923B70D529484BF4002A5EF6 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B70D429484BF4002A5EF6 /* Post.swift */; };
+		923B70D729495E78002A5EF6 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B70D629495E78002A5EF6 /* ProfileViewModel.swift */; };
+		923B70DC29496313002A5EF6 /* PostRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B70DB29496313002A5EF6 /* PostRowViewModel.swift */; };
 		92B76BDD2938545A001E3794 /* MOPAProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B76BDC2938545A001E3794 /* MOPAProjectApp.swift */; };
 		92B76BDF2938545A001E3794 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B76BDE2938545A001E3794 /* ContentView.swift */; };
 		92B76BE12938545C001E3794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92B76BE02938545C001E3794 /* Assets.xcassets */; };
@@ -62,6 +64,8 @@
 		923B70D0294846DE002A5EF6 /* uploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadPostViewModel.swift; sourceTree = "<group>"; };
 		923B70D229484A33002A5EF6 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		923B70D429484BF4002A5EF6 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		923B70D629495E78002A5EF6 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		923B70DB29496313002A5EF6 /* PostRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRowViewModel.swift; sourceTree = "<group>"; };
 		92B76BD92938545A001E3794 /* MOPAProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MOPAProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B76BDC2938545A001E3794 /* MOPAProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOPAProjectApp.swift; sourceTree = "<group>"; };
 		92B76BDE2938545A001E3794 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,6 +110,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		923B70D9294962EE002A5EF6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				92B76BF5293855F5001E3794 /* PostRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		923B70DA294962F1002A5EF6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				923B70DB29496313002A5EF6 /* PostRowViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		92B76BD02938545A001E3794 = {
 			isa = PBXGroup;
 			children = (
@@ -230,7 +250,8 @@
 		92B76BF4293855B7001E3794 /* Post */ = {
 			isa = PBXGroup;
 			children = (
-				92B76BF5293855F5001E3794 /* PostRowView.swift */,
+				923B70DA294962F1002A5EF6 /* ViewModel */,
+				923B70D9294962EE002A5EF6 /* Views */,
 				92B76C27293EDDA3001E3794 /* TextArea.swift */,
 			);
 			path = Post;
@@ -282,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				92B76C09293D23CB001E3794 /* TweetFilterViewModel.swift */,
+				923B70D629495E78002A5EF6 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -514,6 +536,7 @@
 				92B76C3129402BB2001E3794 /* RoundedShape.swift in Sources */,
 				92B76C26293EDC7A001E3794 /* NewPostView.swift in Sources */,
 				923B70C62946AA43002A5EF6 /* UserInfo.swift in Sources */,
+				923B70DC29496313002A5EF6 /* PostRowViewModel.swift in Sources */,
 				92B76BF929398313001E3794 /* MainTabView.swift in Sources */,
 				92B76C2D294029B6001E3794 /* LoginView.swift in Sources */,
 				92B76C0229398616001E3794 /* NotificationsView.swift in Sources */,
@@ -521,6 +544,7 @@
 				92FFA73529416E1B0071E15D /* AuthHeaderView.swift in Sources */,
 				92B76C1E293D8B87001E3794 /* UserStatsView.swift in Sources */,
 				92B76C2F294029C3001E3794 /* RegistrationView.swift in Sources */,
+				923B70D729495E78002A5EF6 /* ProfileViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

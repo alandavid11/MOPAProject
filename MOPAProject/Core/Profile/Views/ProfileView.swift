@@ -10,12 +10,12 @@ import Kingfisher
 
 struct ProfileView: View {
     @State private var selectedFilter: PostFilterViewModel = .Bets
+    @ObservedObject var viewModel: ProfileViewModel
     @Environment(\.dismiss) private var dismiss
     @Namespace var animation
-    private let user: UserInfo
     
     init(user: UserInfo){
-        self.user = user
+        self.viewModel = ProfileViewModel(user: user)
     }
     var body: some View {
         VStack(alignment: .leading){
@@ -53,11 +53,11 @@ extension ProfileView {
                 Button(action: {dismiss()}, label: {
                     Image(systemName: "arrow.left")
                         .resizable()
-                        .frame(width: 20, height: 16)
+                        .frame(width: 26, height: 20)
                         .foregroundColor(.white)
-                        .offset(x: 16, y: -4)
+                        .offset(x: 8, y: 4)
                 })
-                KFImage(URL(string: user.profileImageUrl))
+                KFImage(URL(string: viewModel.user.profileImageUrl))
                     .resizable()
                     .scaledToFill()
                     .clipShape(Circle())
@@ -78,13 +78,17 @@ extension ProfileView {
                 .padding(6)
                 .overlay(Circle().stroke(Color.gray, lineWidth: 0.75))
             
-            Button(action: {},
-                   label: {Text("Edit Profile")
-                .font(.subheadline)
+            Button {
+                
+            } label: {
+                Text(viewModel.actionButtonTitle)
+                    .font(.subheadline)
                 .bold()
                 .frame(width: 120, height: 32)
                 .foregroundColor(.black)
-                .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 0.75))})
+                .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 0.75))
+            }
+            
         }.padding(.trailing)
         
     }
@@ -93,14 +97,14 @@ extension ProfileView {
         VStack(alignment: .leading, spacing: 4){
             
             HStack {
-                Text(user.fullname)
+                Text(viewModel.user.fullname)
                     .font(.title2).bold()
                 
                 Image(systemName: "checkmark.seal.fill")
                     .foregroundColor(Color("mediumgreen"))
             }
             
-            Text("@\(user.username)")
+            Text("@\(viewModel.user.username)")
                 .font(.subheadline)
                 .foregroundColor(.gray)
             
@@ -144,9 +148,9 @@ extension ProfileView {
     var postView: some View {
         ScrollView{
             LazyVStack{
-                ForEach(0...9, id: \.self){_ in
-//                    PostRowView()
-//                        .padding()
+                ForEach(viewModel.posts(forFilter: self.selectedFilter)) {post in
+                    PostRowView(post: post)
+                        .padding()
                 }
             }
         }

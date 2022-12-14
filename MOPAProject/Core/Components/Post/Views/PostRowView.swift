@@ -9,11 +9,16 @@ import SwiftUI
 import Kingfisher
 
 struct PostRowView: View {
-    let post: Post
+    @ObservedObject var viewModel: PostRowViewModel
+    
+    init(post: Post) {
+        self.viewModel = PostRowViewModel(post: post)
+    }
+    
     var body: some View {
         VStack(alignment: .leading){
             // Imagen de perfil + informacion de usuario + post
-            if let user = post.user {
+            if let user = viewModel.post.user {
                 HStack(alignment: .top, spacing: 12){
                     KFImage(URL(string: user.profileImageUrl))
                         .resizable()
@@ -41,7 +46,7 @@ struct PostRowView: View {
                         
                         // Post
                         
-                        Text(post.caption)
+                        Text(viewModel.post.caption)
                             .font(.subheadline)
                             .multilineTextAlignment(.leading)
                         
@@ -63,9 +68,14 @@ struct PostRowView: View {
                 .font(.subheadline)
                 Spacer()
 
-                Button(action: {},
-                       label: {Image(systemName: "heart")})
+                Button{
+                    viewModel.post.didLike ?? false ?
+                    viewModel.unlikePost() : viewModel.likePost()
+                }label: {
+                    Image(systemName: viewModel.post.didLike ?? false ? "heart.fill" : "heart")
+                }
                 .font(.subheadline)
+                .foregroundColor(viewModel.post.didLike ?? false ? .red : .gray)
                 Spacer()
 
                 Button(action: {},

@@ -16,4 +16,5 @@ struct Post: Identifiable, Decodable {
     var likes: Int
     
     var user: UserInfo?
+    var didLike: Bool? = false
 }
